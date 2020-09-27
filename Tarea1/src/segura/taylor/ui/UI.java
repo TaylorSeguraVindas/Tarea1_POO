@@ -48,11 +48,14 @@ public class UI {
 
         System.out.print("Ingrese la fecha de la cita: ");
         String fecha = input.next();
-
+        
+        System.out.print("Ingrese la hora de la cita: ");
+        String hora = input.next();
+        
         System.out.print("Ingrese las observaciones: ");
         String observaciones = input.next();
 
-        Cita nuevaCita = new Cita(nombre, fecha, observaciones);
+        Cita nuevaCita = new Cita(nombre, fecha, hora, observaciones);
         return nuevaCita;
     }
 
@@ -92,11 +95,36 @@ public class UI {
 
     //Usuarios
     public Usuario menuRegistrarUsuario() {
-        return null;
+        System.out.println("\n\nBienvenido al registro de usuarios");
+        System.out.print("Ingrese el nombre del usuario: ");
+        String nombre = input.next();
+        
+        System.out.print("Ingrese la cedula: ");
+        int cedula = input.nextInt();
+        
+        System.out.print("Ingrese el numero de telefono: ");
+        int telefono = input.nextInt();
+        
+        System.out.print("Ingrese la direccion: ");
+        String direccion = input.next();
+        
+        System.out.print("Ingrese el estado(ACTIVO/INACTIVO): ");
+        String estado = input.next();
+        
+        System.out.print("Ingrese el rol(DOCTOR/SECRETARIA): ");
+        String rol = input.next();
+        
+        Usuario nuevoUsuario = new Usuario(nombre, cedula, telefono, direccion, estado, rol);
+        return nuevoUsuario;
     }
 
     public void listarUsuarios(Usuario[] usuarios) {
-
+        System.out.println("\n\nListado de usuarios");
+        for (int i = 0; i < usuarios.length; i++) {
+            if (usuarios[i] != null) {
+                System.out.println((i + 1) + ". " + usuarios[i].toString());
+            }
+        }
     }
 
     //Mascotas

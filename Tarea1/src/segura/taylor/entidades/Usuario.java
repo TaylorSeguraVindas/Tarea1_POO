@@ -68,4 +68,9 @@ public class Usuario {
     }
     
     //Metodos
+    @Override
+    public String toString(){
+        String resultado = "Usuario [Nombre: " + this.nombreCompleto + ", cedula: " + this.cedula + ", telefono: " + this.telefono + ", direccion: " + this.direccion + ", estado: " + this.estado + ", rol: " + this.rol + "]";
+        return resultado;
+    }
 }

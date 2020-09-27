@@ -111,6 +111,13 @@ public class BusinessLogic {
         Usuario nuevoUsuario = ui.menuRegistrarUsuario();
         if(nuevoUsuario != null){
             //Guardar el usuario si se recibe uno valido.
+            for (int i = 0; i < usuarios.length; i++){
+                if(usuarios[i] == null){
+                    usuarios[i] = nuevoUsuario;
+                    ui.imprimirMensaje("Usuario registrado correctamente.");
+                    return;
+                }
+            }
         }
     }
     public void listarUsuarios(){

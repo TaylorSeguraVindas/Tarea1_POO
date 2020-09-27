@@ -8,6 +8,7 @@ public class Cita {
     //Variables
     private String nombreMascota;
     private String fecha;
+    private String hora;
     private String observaciones;
     
     //Propiedades
@@ -25,6 +26,13 @@ public class Cita {
         this.fecha = value;
     }
     
+    public String getHora(){
+        return this.hora;
+    }
+    public void setHora(String value){
+        this.hora = value;
+    }
+    
     public String getObservaciones(){
         return this.observaciones;
     }
@@ -34,16 +42,17 @@ public class Cita {
     
     //constructores
     public Cita(){}
-    public Cita(String pNombreMascota, String pFecha, String pObservaciones){
+    public Cita(String pNombreMascota, String pFecha, String pHora, String pObservaciones){
         this.nombreMascota = pNombreMascota;
         this.fecha = pFecha;
+        this.hora = pHora;
         this.observaciones = pObservaciones;
     }
     
     //Metodos
     @Override
     public String toString(){
-        String resultado = "Cita [Mascota: " + nombreMascota + ", fecha de la cita: " + fecha + ", observaciones: " + observaciones + "]";
+        String resultado = "Cita [Mascota: " + this.nombreMascota + ", fecha de la cita: " + this.fecha + ", observaciones: " + this.observaciones + "]";
         return resultado;
     }
 }
