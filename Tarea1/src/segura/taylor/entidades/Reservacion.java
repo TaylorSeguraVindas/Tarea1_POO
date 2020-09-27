@@ -41,4 +41,9 @@ public class Reservacion {
     }
     
     //Metodos
+    @Override
+    public String toString(){
+        String resultado = "Reservacion [Mascota: " + nombreMascota + ", fecha de entrada: " + fechaEntrada + ", fecha de salida: " + fechaSalida + "]";
+        return resultado;
+    }
 }

@@ -15,10 +15,10 @@ public class BusinessLogic {
     //Variables
     private UI ui = new UI();
     
-    private Cita[] citas = new Cita[10];
-    private Mascota[] mascotas = new Mascota[10];
-    private Reservacion[] reservaciones = new Reservacion[10];
-    private Usuario[] usuarios = new Usuario[10];
+    private Cita[] citas = new Cita[100];
+    private Mascota[] mascotas = new Mascota[100];
+    private Reservacion[] reservaciones = new Reservacion[100];
+    private Usuario[] usuarios = new Usuario[100];
     
     //Propiedades
     
@@ -93,6 +93,13 @@ public class BusinessLogic {
         Reservacion nuevaReservacion = ui.menuRegistrarReservacion();
         if(nuevaReservacion != null){
             //Guardar la reservacion si se recibe una valida.
+            for (int i = 0; i < reservaciones.length; i++){
+                if(reservaciones[i] == null){
+                    reservaciones[i] = nuevaReservacion;
+                    ui.imprimirMensaje("Reservacion registrada correctamente.");
+                    return;
+                }
+            }
         }
     }
     public void listarReservaciones(){
