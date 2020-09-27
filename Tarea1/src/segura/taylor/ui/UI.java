@@ -5,6 +5,7 @@ import segura.taylor.entidades.Cita;
 import segura.taylor.entidades.Mascota;
 import segura.taylor.entidades.Reservacion;
 import segura.taylor.entidades.Usuario;
+import segura.taylor.entidades.Duenno;
 
 /**
  *
@@ -13,7 +14,6 @@ import segura.taylor.entidades.Usuario;
 public class UI {
 
     //Variables
-
     private Scanner input = new Scanner(System.in).useDelimiter("\\n");
 
     //Propiedades
@@ -48,10 +48,10 @@ public class UI {
 
         System.out.print("Ingrese la fecha de la cita: ");
         String fecha = input.next();
-        
+
         System.out.print("Ingrese la hora de la cita: ");
         String hora = input.next();
-        
+
         System.out.print("Ingrese las observaciones: ");
         String observaciones = input.next();
 
@@ -98,22 +98,22 @@ public class UI {
         System.out.println("\n\nBienvenido al registro de usuarios");
         System.out.print("Ingrese el nombre del usuario: ");
         String nombre = input.next();
-        
+
         System.out.print("Ingrese la cedula: ");
         int cedula = input.nextInt();
-        
+
         System.out.print("Ingrese el numero de telefono: ");
         int telefono = input.nextInt();
-        
+
         System.out.print("Ingrese la direccion: ");
         String direccion = input.next();
-        
+
         System.out.print("Ingrese el estado(ACTIVO/INACTIVO): ");
         String estado = input.next();
-        
+
         System.out.print("Ingrese el rol(DOCTOR/SECRETARIA): ");
         String rol = input.next();
-        
+
         Usuario nuevoUsuario = new Usuario(nombre, cedula, telefono, direccion, estado, rol);
         return nuevoUsuario;
     }
@@ -129,11 +129,45 @@ public class UI {
 
     //Mascotas
     public Mascota menuRegistrarMascota() {
-        return null;
+        System.out.println("\n\nBienvenido al registro de mascotas");
+        System.out.println("DATOS DE LA MASCOTA");
+        System.out.print("Ingrese el nombre de la mascota: ");
+        String nombreMascota = input.next();
+
+        System.out.print("Ingrese la foto: ");
+        String foto = input.next();
+
+        System.out.print("Ingrese las observaciones: ");
+        String observaciones = input.next();
+
+        System.out.print("Ingrese el ranking: ");
+        int ranking = input.nextInt();
+
+        System.out.println("DATOS DEL DUEÑO");
+        System.out.print("Ingrese el nombre del dueño: ");
+        String nombreDuenno = input.next();
+
+        System.out.print("Ingrese la cedula del dueño: ");
+        int cedula = input.nextInt();
+
+        System.out.print("Ingrese el telefono del dueño: ");
+        int telefono = input.nextInt();
+
+        System.out.print("Ingrese la direccion del dueño: ");
+        String direccion = input.next();
+
+        Duenno duennoMascota = new Duenno(nombreDuenno, cedula, telefono, direccion);
+        Mascota nuevaMascota = new Mascota(nombreMascota, duennoMascota, foto, observaciones, ranking);
+        return nuevaMascota;
     }
 
     public void listarMascotas(Mascota[] mascotas) {
-
+        System.out.println("\n\nListado de mascotas");
+        for (int i = 0; i < mascotas.length; i++) {
+            if (mascotas[i] != null) {
+                System.out.println((i + 1) + ". " + mascotas[i].toString());
+            }
+        }
     }
 
     //Otros

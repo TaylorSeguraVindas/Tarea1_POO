@@ -5,60 +5,70 @@ package segura.taylor.entidades;
  * @author Taylor Segura Vindas
  */
 public class Usuario {
+
     //Variables
+
     private String nombreCompleto;
     private int cedula;
     private int telefono;
     private String direccion;
     private String estado;
     private String rol;
-    
+
     //Propiedades
-    public String getNombreCompleto(){
+    public String getNombreCompleto() {
         return this.nombreCompleto;
     }
-    public void setNombreCompleto(String value){
+
+    public void setNombreCompleto(String value) {
         this.nombreCompleto = value;
     }
-    
-    public int getCedula(){
+
+    public int getCedula() {
         return this.cedula;
     }
-    public void setCedula(int value){
+
+    public void setCedula(int value) {
         this.cedula = value;
     }
-    
-    public int getTelefono(){
+
+    public int getTelefono() {
         return this.telefono;
     }
-    public void setTelefono(int value){
+
+    public void setTelefono(int value) {
         this.telefono = value;
     }
-    
-    public String getDireccion(){
+
+    public String getDireccion() {
         return this.direccion;
     }
-    public void setDireccion(String value){
+
+    public void setDireccion(String value) {
         this.direccion = value;
     }
-    
-    public String getEstado(){
+
+    public String getEstado() {
         return this.estado;
     }
-    public void setEstado(String value){
+
+    public void setEstado(String value) {
         this.estado = value;
     }
-    
-    public String getRol(){
+
+    public String getRol() {
         return this.rol;
     }
-    public void setRol(String value){
+
+    public void setRol(String value) {
         this.rol = value;
     }
-    
+
     //Constructores
-    public Usuario(){}
-    public Usuario(String pNombre, int pCedula, int pTelefono, String pDireccion, String pEstado, String pRol){
+    public Usuario() {
+    }
+
+    public Usuario(String pNombre, int pCedula, int pTelefono, String pDireccion, String pEstado, String pRol) {
         this.nombreCompleto = pNombre;
         this.cedula = pCedula;
         this.telefono = pTelefono;
@@ -66,10 +76,10 @@ public class Usuario {
         this.estado = pEstado;
         this.rol = pRol;
     }
-    
+
     //Metodos
     @Override
-    public String toString(){
+    public String toString() {
         String resultado = "Usuario [Nombre: " + this.nombreCompleto + ", cedula: " + this.cedula + ", telefono: " + this.telefono + ", direccion: " + this.direccion + ", estado: " + this.estado + ", rol: " + this.rol + "]";
         return resultado;
     }
