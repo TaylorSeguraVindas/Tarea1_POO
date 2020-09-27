@@ -13,7 +13,6 @@ import segura.taylor.entidades.Usuario;
 public class BusinessLogic {
 
     //Variables
-
     private UI ui = new UI();
 
     private Cita[] citas = new Cita[100];
@@ -119,6 +118,12 @@ public class BusinessLogic {
                     usuarios[i] = nuevoUsuario;
                     ui.imprimirMensaje("Usuario registrado correctamente.");
                     return;
+                } else {
+                    //Evitar repeticion de datos.
+                    if (usuarios[i].getCedula() == nuevoUsuario.getCedula()) {
+                        ui.imprimirMensaje(("Ya existe un usuario con este numero de cedula, intentelo nuevamente."));
+                        return;
+                    }
                 }
             }
         }
@@ -138,6 +143,12 @@ public class BusinessLogic {
                     mascotas[i] = nuevaMascota;
                     ui.imprimirMensaje("Mascota registrada correctamente.");
                     return;
+                } else {
+                    //Evitar repetición de datos.
+                    if (mascotas[i].getNombre().equalsIgnoreCase(nuevaMascota.getNombre())) {
+                        ui.imprimirMensaje(("Ya existe una mascota con este nombre, intentelo nuevamente."));
+                        return;
+                    }
                 }
             }
         }
