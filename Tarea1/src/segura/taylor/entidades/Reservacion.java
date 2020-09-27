@@ -34,10 +34,10 @@ public class Reservacion {
     
     //Constructores
     public Reservacion(){}
-    public  Reservacion(String p_nombreMascota, String p_fechaEntrada, String p_fechaSalida){
-        this.nombreMascota = p_nombreMascota;
-        this.fechaEntrada = p_fechaEntrada;
-        this.fechaSalida = p_fechaSalida;
+    public  Reservacion(String pNombreMascota, String pFechaEntrada, String pFechaSalida){
+        this.nombreMascota = pNombreMascota;
+        this.fechaEntrada = pFechaEntrada;
+        this.fechaSalida = pFechaSalida;
     }
     
     //Metodos

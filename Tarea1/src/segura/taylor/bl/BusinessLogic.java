@@ -32,11 +32,11 @@ public class BusinessLogic {
         do{    
             opcion = ui.menuInicio();
             procesarOpcion(opcion);
-        } while(opcion != 8);
+        } while(opcion != 9);
     }
     
-    public void procesarOpcion(int p_opcion){
-        switch(p_opcion){
+    public void procesarOpcion(int opcion){
+        switch(opcion){
             case 1:
                 registrarCita();
                 break;
@@ -61,6 +61,12 @@ public class BusinessLogic {
             case 8:
                 listarMascotas();
                 break;
+            case 9:
+                ui.imprimirMensaje("Adios");
+                break;
+            default:
+                ui.imprimirMensaje("Opcion invalida");
+                break;
         }
     }
     
@@ -69,6 +75,13 @@ public class BusinessLogic {
         Cita nuevaCita = ui.menuRegistrarCita();
         if(nuevaCita != null){
             //Guardar la cita si se recibe una valida.
+            for (int i = 0; i < citas.length; i++){
+                if(citas[i] == null){
+                    citas[i] = nuevaCita;
+                    ui.imprimirMensaje("Cita registrada correctamente.");
+                    return;
+                }
+            }
         }
     }    
     public void listarCitas(){

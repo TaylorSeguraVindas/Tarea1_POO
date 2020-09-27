@@ -58,13 +58,13 @@ public class Usuario {
     
     //Constructores
     public Usuario(){}
-    public Usuario(String p_nombre, int p_cedula, int p_telefono, String p_direccion, String p_estado, String p_rol){
-        this.nombreCompleto = p_nombre;
-        this.cedula = p_cedula;
-        this.telefono = p_telefono;
-        this.direccion = p_direccion;
-        this.estado = p_estado;
-        this.rol = p_rol;
+    public Usuario(String pNombre, int pCedula, int pTelefono, String pDireccion, String pEstado, String pRol){
+        this.nombreCompleto = pNombre;
+        this.cedula = pCedula;
+        this.telefono = pTelefono;
+        this.direccion = pDireccion;
+        this.estado = pEstado;
+        this.rol = pRol;
     }
     
     //Metodos

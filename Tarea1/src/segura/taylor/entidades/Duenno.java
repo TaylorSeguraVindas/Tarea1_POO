@@ -42,11 +42,11 @@ public class Duenno {
     
     //Constructores
     public Duenno(){}
-    public Duenno(String p_nombre, int p_cedula, int p_telefono, String p_direccion){
-        this.nombreCompleto = p_nombre;
-        this.cedula = p_cedula;
-        this.telefono = p_telefono;
-        this.direccion = p_direccion;
+    public Duenno(String pNombre, int pCedula, int pTelefono, String pDireccion){
+        this.nombreCompleto = pNombre;
+        this.cedula = pCedula;
+        this.telefono = pTelefono;
+        this.direccion = pDireccion;
     }
     
     //Metodos

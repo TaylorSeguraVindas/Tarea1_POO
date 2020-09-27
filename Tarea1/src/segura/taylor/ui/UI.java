@@ -21,6 +21,7 @@ public class UI {
     
     //Metodos
     public int menuInicio(){
+        System.out.print("\n\n\n\n");
         System.out.println("***Bienvenido a Veterinaria MOKA***");
         System.out.println("1. Registrar cita");
         System.out.println("2. Listar citas");
@@ -32,23 +33,41 @@ public class UI {
         System.out.println("8. Listar mascotas");
         System.out.println("9. Salir");
         
+        System.out.print("\nSu opcion: ");
         int opcion = input.nextInt();
         return opcion;
     }
     
     //Citas
     public Cita menuRegistrarCita(){
-        return null;
-    }
-    public void listarCitas(Cita[] p_citas){
+        System.out.println("\n\nBienvenido al registro de citas");
+        System.out.print("Ingrese el nombre de la mascota: ");
+        String nombre = input.next();
         
+        System.out.print("Ingrese la fecha de la cita: ");
+        String fecha = input.next();
+        
+        System.out.print("Ingrese las observaciones: ");
+        String observaciones = input.next();
+        
+        Cita nuevaCita = new Cita(nombre, fecha, observaciones);
+        return nuevaCita;
+    }
+    public void listarCitas(Cita[] citas){        
+        System.out.println("\n\nListado de citas");
+        for (int i = 0; i < citas.length; i++){
+            if(citas[i] != null)
+            {
+                System.out.println((i+1) + ". " + citas[i].toString());
+            }            
+        }
     }
     
     //Reservaciones
     public Reservacion menuRegistrarReservacion(){
         return null;
     }
-    public void listarReservaciones(Reservacion[] p_reservaciones){
+    public void listarReservaciones(Reservacion[] reservaciones){
     
     }
     
@@ -56,7 +75,7 @@ public class UI {
     public Usuario menuRegistrarUsuario(){
         return null;
     }
-    public void listarUsuarios(Usuario[] p_usuarios){
+    public void listarUsuarios(Usuario[] usuarios){
         
     }
     
@@ -64,7 +83,12 @@ public class UI {
     public Mascota menuRegistrarMascota(){
         return null;
     }
-    public void listarMascotas(Mascota[] p_mascotas){
+    public void listarMascotas(Mascota[] mascotas){
         
+    }
+    
+    //Otros
+    public void imprimirMensaje(String mensaje){
+        System.out.println(mensaje);
     }
 }

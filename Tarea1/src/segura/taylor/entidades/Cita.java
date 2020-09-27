@@ -34,9 +34,16 @@ public class Cita {
     
     //constructores
     public Cita(){}
-    public Cita(String p_nombreMascota, String p_fecha, String p_observaciones){
-        this.nombreMascota = p_nombreMascota;
-        this.fecha = p_fecha;
-        this.observaciones = p_observaciones;
+    public Cita(String pNombreMascota, String pFecha, String pObservaciones){
+        this.nombreMascota = pNombreMascota;
+        this.fecha = pFecha;
+        this.observaciones = pObservaciones;
+    }
+    
+    //Metodos
+    @Override
+    public String toString(){
+        String resultado = "Cita [Mascota: " + nombreMascota + ", fecha de la cita: " + fecha + ", observaciones: " + observaciones + "]";
+        return resultado;
     }
 }

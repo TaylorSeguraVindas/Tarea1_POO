@@ -50,12 +50,12 @@ public class Mascota {
     
     //Constructores
     public Mascota(){}
-    public Mascota(String p_nombre, Duenno p_duenno, String p_foto, String p_observaciones, int p_ranking){
-        this.nombre = p_nombre;
-        this.duenno = p_duenno;
-        this.foto = p_foto;
-        this.observaciones = p_observaciones;
-        this.ranking = p_ranking;
+    public Mascota(String pNombre, Duenno pDuenno, String pFoto, String pObservaciones, int pRanking){
+        this.nombre = pNombre;
+        this.duenno = pDuenno;
+        this.foto = pFoto;
+        this.observaciones = pObservaciones;
+        this.ranking = pRanking;
     }
     
     //Metodos
