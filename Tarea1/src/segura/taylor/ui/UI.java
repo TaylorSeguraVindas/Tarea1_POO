@@ -100,10 +100,10 @@ public class UI {
         String nombre = input.next();
 
         System.out.print("Ingrese la cedula: ");
-        int cedula = input.nextInt();
+        String cedula = input.next();
 
         System.out.print("Ingrese el numero de telefono: ");
-        int telefono = input.nextInt();
+        String telefono = input.next();
 
         System.out.print("Ingrese la direccion: ");
         String direccion = input.next();
@@ -148,10 +148,10 @@ public class UI {
         String nombreDuenno = input.next();
 
         System.out.print("Ingrese la cedula del dueño: ");
-        int cedula = input.nextInt();
+        String cedula = input.next();
 
         System.out.print("Ingrese el telefono del dueño: ");
-        int telefono = input.nextInt();
+        String telefono = input.next();
 
         System.out.print("Ingrese la direccion del dueño: ");
         String direccion = input.next();

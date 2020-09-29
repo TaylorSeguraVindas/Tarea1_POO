@@ -9,8 +9,8 @@ public class Usuario {
     //Variables
 
     private String nombreCompleto;
-    private int cedula;
-    private int telefono;
+    private String cedula;
+    private String telefono;
     private String direccion;
     private String estado;
     private String rol;
@@ -24,19 +24,19 @@ public class Usuario {
         this.nombreCompleto = value;
     }
 
-    public int getCedula() {
+    public String getCedula() {
         return this.cedula;
     }
 
-    public void setCedula(int value) {
+    public void setCedula(String value) {
         this.cedula = value;
     }
 
-    public int getTelefono() {
+    public String getTelefono() {
         return this.telefono;
     }
 
-    public void setTelefono(int value) {
+    public void setTelefono(String value) {
         this.telefono = value;
     }
 
@@ -68,7 +68,7 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(String pNombre, int pCedula, int pTelefono, String pDireccion, String pEstado, String pRol) {
+    public Usuario(String pNombre, String pCedula, String pTelefono, String pDireccion, String pEstado, String pRol) {
         this.nombreCompleto = pNombre;
         this.cedula = pCedula;
         this.telefono = pTelefono;

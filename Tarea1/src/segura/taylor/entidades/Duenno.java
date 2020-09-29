@@ -9,8 +9,8 @@ public class Duenno {
     //Variables
 
     private String nombreCompleto;
-    private int cedula;
-    private int telefono;
+    private String cedula;
+    private String telefono;
     private String direccion;
 
     //Propiedades
@@ -22,19 +22,19 @@ public class Duenno {
         this.nombreCompleto = value;
     }
 
-    public int getCedula() {
+    public String getCedula() {
         return this.cedula;
     }
 
-    public void setCedula(int value) {
+    public void setCedula(String value) {
         this.cedula = value;
     }
 
-    public int getTelefono() {
+    public String getTelefono() {
         return this.telefono;
     }
 
-    public void setTelefono(int value) {
+    public void setTelefono(String value) {
         this.telefono = value;
     }
 
@@ -50,7 +50,7 @@ public class Duenno {
     public Duenno() {
     }
 
-    public Duenno(String pNombre, int pCedula, int pTelefono, String pDireccion) {
+    public Duenno(String pNombre, String pCedula, String pTelefono, String pDireccion) {
         this.nombreCompleto = pNombre;
         this.cedula = pCedula;
         this.telefono = pTelefono;

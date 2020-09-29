@@ -120,7 +120,7 @@ public class BusinessLogic {
                     return;
                 } else {
                     //Evitar repeticion de datos.
-                    if (usuarios[i].getCedula() == nuevoUsuario.getCedula()) {
+                    if (usuarios[i].getCedula().equals(nuevoUsuario.getCedula())) {
                         ui.imprimirMensaje(("Ya existe un usuario con este numero de cedula, intentelo nuevamente."));
                         return;
                     }
